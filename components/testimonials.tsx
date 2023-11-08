@@ -5,6 +5,11 @@ import Partner from "@/components/partner";
 export default function Testimonials() {
   const partners = [
     {
+      href: 'https://www.ligoapp.com/',
+      src: 'images/partners/ligo.png',
+      alt: 'Ligo logo'
+    },
+    {
       href: 'https://www.apchh.com/',
       src: 'images/partners/apc.PNG',
       alt: 'APC Homemaker services logo'

@@ -32,7 +32,7 @@ export default function ServicesBlocks() {
     {
       title: 'CMS Development',
       description: 'We design and develop content management systems tailored to meet business needs and automate workflows',
-      image: 'images/cms.png'
+      image: 'images/service-icons/cms.png'
     },
   ];
 
