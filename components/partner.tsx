@@ -4,6 +4,7 @@ function Partner({ href, src, alt, imgClass }: any) {
     return (
         <Link
             href={href}
+            target="_blank"
             className="block"
             aria-label="aplos-partner">
             <img
