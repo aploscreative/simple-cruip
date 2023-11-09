@@ -48,7 +48,7 @@ export default function ServicesBlocks() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-10">
-            <h2 className="h2 mb-4">Providing an array of Technology Services</h2>
+            <h2 className="h2 mb-4">What we have to offer</h2>
             <p className="text-xl text-gray-600">
               With over a decade of experience in mobile and web app development, we enable businesses to bolster their digital presence in the fiercely competitive global market.
             </p>
