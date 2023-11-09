@@ -1,11 +1,11 @@
-import {useState} from "react";
-import {sendEmail} from "@/utils/send-email";
+'use client';
+import { useState } from "react";
+import { sendEmail } from "@/utils/send-email";
 
 export type AplosContactForm = {
     name: string;
     email: string;
     phone: string;
-    subject: string;
     message: string;
 }
 
@@ -14,7 +14,6 @@ export function ContactForm() {
         name: '',
         email: '',
         phone: '',
-        subject: '',
         message: ''
     })
 
@@ -40,7 +39,6 @@ export function ContactForm() {
                 name: '',
                 email: '',
                 phone: '',
-                subject: '',
                 message: ''
             })
 
@@ -50,13 +48,13 @@ export function ContactForm() {
     }
 
     return (
-        <div className="flex items-center justify-center p-12">
+        <div className="flex items-center justify-center p-12 bg-white rounded">
             <div className="mx-auto w-full max-w-[550px]">
                 {
                     formSuccess
                         ? <div>{formSuccessMessage}</div>
                         : <form method="POST" onSubmit={submitForm}>
-                            <div className="mb-5">
+                            <div className="mb-2">
                                 <label
                                     htmlFor="name"
                                     className="mb-3 block text-base font-medium text-[#07074D]"
@@ -72,7 +70,7 @@ export function ContactForm() {
                                     value={formData.name}
                                 />
                             </div>
-                            <div className="mb-5">
+                            <div className="mb-2">
                                 <label
                                     htmlFor="email"
                                     className="mb-3 block text-base font-medium text-[#07074D]"
@@ -88,7 +86,7 @@ export function ContactForm() {
                                     value={formData.email}
                                 />
                             </div>
-                            <div className="mb-5">
+                            <div className="mb-2">
                                 <label
                                     htmlFor="phone"
                                     className="mb-3 block text-base font-medium text-[#07074D]"
@@ -102,22 +100,6 @@ export function ContactForm() {
                                     placeholder="Phone number"
                                     className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                                     value={formData.phone}
-                                />
-                            </div>
-                            <div className="mb-5">
-                                <label
-                                    htmlFor="subject"
-                                    className="mb-3 block text-base font-medium text-[#07074D]"
-                                >
-                                    Subject
-                                </label>
-                                <input
-                                    type="text"
-                                    name="subject"
-                                    id="subject"
-                                    placeholder="Enter your subject"
-                                    className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                                    value={formData.subject}
                                 />
                             </div>
                             <div className="mb-5">

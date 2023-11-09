@@ -872,3 +872,8 @@
   "integrity" "sha512-N/lyzTPaJasoDmfV7YTrYCI0G/3ivm/9wdG0aHuheKowWQwGTsK0Eoiw6utmzAnI6pkJa0DUVygvp3spqqEKXg=="
   "resolved" "https://registry.npmjs.org/yaml/-/yaml-2.3.2.tgz"
   "version" "2.3.2"
+
+"zod@^3.22.4":
+  "integrity" "sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg=="
+  "resolved" "https://registry.npmjs.org/zod/-/zod-3.22.4.tgz"
+  "version" "3.22.4"
