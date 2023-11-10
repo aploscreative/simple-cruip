@@ -3,7 +3,7 @@ import nodemailer from 'nodemailer';
 import Mail from 'nodemailer/lib/mailer';
 
 export async function POST(request: NextRequest) {
-    const { name, email, phone, subject, message } = await request.json();
+    const { name, email, phone, message } = await request.json();
 
     const transport = nodemailer.createTransport({
         host: process.env.EMAIL_HOST,
@@ -17,8 +17,9 @@ export async function POST(request: NextRequest) {
 
     const mailOptions: Mail.Options = {
         from: process.env.EMAIL_FROM,
-        to: process.env.EMAIL_FROM,
-        subject,
+        sender: process.env.EMAIL_SENDER,
+        to: process.env.EMAIL_TO,
+        subject: `Contact submitted by: ${name}`,
         text: `
             Name: ${name}
             Email: ${email}

@@ -1,6 +1,5 @@
-'use client';
-import { useState } from "react";
-import { sendEmail } from "@/utils/send-email";
+import { FormEvent } from "react";
+import {sendEmail} from "@/utils/send-email";
 
 export type AplosContactForm = {
     name: string;
@@ -10,50 +9,36 @@ export type AplosContactForm = {
 }
 
 export function ContactForm() {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        phone: '',
-        message: ''
-    })
+    let successMessage = '';
+    let errorMessage = '';
 
-    const [formSuccess, setFormSuccess] = useState(false)
-    const [formSuccessMessage, setFormSuccessMessage] = useState("")
-
-    const handleInput = (e: any) => {
-        const fieldName = e.target.name;
-        const fieldValue = e.target.value;
-
-        setFormData((prevState) => ({
-            ...prevState,
-            [fieldName]: fieldValue
-        }));
-    }
-
-    const submitForm =  (e: any) => {
+    const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
+        successMessage = '';
+        errorMessage = '';
 
-        // POST the data to the URL of the form
-        sendEmail(formData as AplosContactForm).then(response => {
-            setFormData({
-                name: '',
-                email: '',
-                phone: '',
-                message: ''
-            })
+        const formData = new FormData(e.currentTarget);
+        let payload: any = {};
+        formData.forEach(function (value: any, key: string) {
+            payload[key] = value;
+        });
 
-            setFormSuccess(true)
-            setFormSuccessMessage("We will be in touch soon!")
-        })
+        try {
+            e.currentTarget.reset();
+            await sendEmail(payload as AplosContactForm)
+            successMessage = 'You will hear from us soon!';
+        } catch(e) {
+            errorMessage = 'Unable to submit form. Whoops. You can always reach us at contact@aploscreative.com';
+        }
     }
 
     return (
         <div className="flex items-center justify-center p-12 bg-white rounded">
             <div className="mx-auto w-full max-w-[550px]">
                 {
-                    formSuccess
-                        ? <div>{formSuccessMessage}</div>
-                        : <form method="POST" onSubmit={submitForm}>
+                    successMessage
+                        ? <div>{successMessage}</div>
+                        : <form onSubmit={onSubmit}>
                             <div className="mb-2">
                                 <label
                                     htmlFor="name"
@@ -67,7 +52,6 @@ export function ContactForm() {
                                     id="name"
                                     placeholder="Full Name"
                                     className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                                    value={formData.name}
                                 />
                             </div>
                             <div className="mb-2">
@@ -83,7 +67,6 @@ export function ContactForm() {
                                     id="email"
                                     placeholder="example@domain.com"
                                     className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                                    value={formData.email}
                                 />
                             </div>
                             <div className="mb-2">
@@ -91,7 +74,7 @@ export function ContactForm() {
                                     htmlFor="phone"
                                     className="mb-3 block text-base font-medium text-[#07074D]"
                                 >
-                                    Full Name
+                                    Phone Number
                                 </label>
                                 <input
                                     type="text"
@@ -99,7 +82,6 @@ export function ContactForm() {
                                     id="phone"
                                     placeholder="Phone number"
                                     className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                                    value={formData.phone}
                                 />
                             </div>
                             <div className="mb-5">
@@ -115,7 +97,6 @@ export function ContactForm() {
                                     id="message"
                                     placeholder="Type your message"
                                     className="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                                    value={formData.message}
                                 ></textarea>
                             </div>
                             <div>

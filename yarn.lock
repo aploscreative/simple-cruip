@@ -72,15 +72,15 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@next/env@13.5.4":
-  "integrity" "sha512-LGegJkMvRNw90WWphGJ3RMHMVplYcOfRWf2Be3td3sUa+1AaxmsYyANsA+znrGCBjXJNi4XAQlSoEfUxs/4kIQ=="
-  "resolved" "https://registry.npmjs.org/@next/env/-/env-13.5.4.tgz"
-  "version" "13.5.4"
+"@next/env@13.4.16":
+  "integrity" "sha512-pCU0sJBqdfKP9mwDadxvZd+eLz3fZrTlmmDHY12Hdpl3DD0vy8ou5HWKVfG0zZS6tqhL4wnQqRbspdY5nqa7MA=="
+  "resolved" "https://registry.npmjs.org/@next/env/-/env-13.4.16.tgz"
+  "version" "13.4.16"
 
-"@next/swc-win32-x64-msvc@13.5.4":
-  "integrity" "sha512-cyRvlAxwlddlqeB9xtPSfNSCRy8BOa4wtMo0IuI9P7Y0XT2qpDrpFKRyZ7kUngZis59mPVla5k8X1oOJ8RxDYg=="
-  "resolved" "https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-13.5.4.tgz"
-  "version" "13.5.4"
+"@next/swc-win32-x64-msvc@13.4.16":
+  "integrity" "sha512-WamDZm1M/OEM4QLce3lOmD1XdLEl37zYZwlmOLhmF7qYJ2G6oYm9+ejZVv+LakQIsIuXhSpVlOvrxIAHqwRkPQ=="
+  "resolved" "https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-13.4.16.tgz"
+  "version" "13.4.16"
 
 "@nodelib/fs.scandir@2.1.5":
   "integrity" "sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g=="
@@ -103,10 +103,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     "fastq" "^1.6.0"
 
-"@swc/helpers@0.5.2":
-  "integrity" "sha512-E4KcWTpoLHqwPHLxidpOqQbcrZVgi0rsmmZXUle1jXmJfuIf/UWpczUJ7MZZ5tlxytgJXyp0w4PGkkeLiuIdZw=="
-  "resolved" "https://registry.npmjs.org/@swc/helpers/-/helpers-0.5.2.tgz"
-  "version" "0.5.2"
+"@swc/helpers@0.5.1":
+  "integrity" "sha512-sJ902EfIzn1Fa+qYmjdQqh8tPsoxyBz+8yBKC2HKUxyezKJFwPGOn7pv4WY6QuQW//ySQi5lJjA/ZT9sNWWNTg=="
+  "resolved" "https://registry.npmjs.org/@swc/helpers/-/helpers-0.5.1.tgz"
+  "version" "0.5.1"
   dependencies:
     "tslib" "^2.4.0"
 
@@ -514,33 +514,34 @@
     "object-assign" "^4.0.1"
     "thenify-all" "^1.0.0"
 
-"nanoid@^3.3.6":
+"nanoid@^3.3.4", "nanoid@^3.3.6":
   "integrity" "sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA=="
   "resolved" "https://registry.npmjs.org/nanoid/-/nanoid-3.3.6.tgz"
   "version" "3.3.6"
 
-"next@^13.4.4":
-  "integrity" "sha512-+93un5S779gho8y9ASQhb/bTkQF17FNQOtXLKAj3lsNgltEcF0C5PMLLncDmH+8X1EnJH1kbqAERa29nRXqhjA=="
-  "resolved" "https://registry.npmjs.org/next/-/next-13.5.4.tgz"
-  "version" "13.5.4"
+"next@^13.4.16":
+  "integrity" "sha512-1xaA/5DrfpPu0eV31Iro7JfPeqO8uxQWb1zYNTe+KDKdzqkAGapLcDYHMLNKXKB7lHjZ7LfKUOf9dyuzcibrhA=="
+  "resolved" "https://registry.npmjs.org/next/-/next-13.4.16.tgz"
+  "version" "13.4.16"
   dependencies:
-    "@next/env" "13.5.4"
-    "@swc/helpers" "0.5.2"
+    "@next/env" "13.4.16"
+    "@swc/helpers" "0.5.1"
     "busboy" "1.6.0"
     "caniuse-lite" "^1.0.30001406"
-    "postcss" "8.4.31"
+    "postcss" "8.4.14"
     "styled-jsx" "5.1.1"
     "watchpack" "2.4.0"
+    "zod" "3.21.4"
   optionalDependencies:
-    "@next/swc-darwin-arm64" "13.5.4"
-    "@next/swc-darwin-x64" "13.5.4"
-    "@next/swc-linux-arm64-gnu" "13.5.4"
-    "@next/swc-linux-arm64-musl" "13.5.4"
-    "@next/swc-linux-x64-gnu" "13.5.4"
-    "@next/swc-linux-x64-musl" "13.5.4"
-    "@next/swc-win32-arm64-msvc" "13.5.4"
-    "@next/swc-win32-ia32-msvc" "13.5.4"
-    "@next/swc-win32-x64-msvc" "13.5.4"
+    "@next/swc-darwin-arm64" "13.4.16"
+    "@next/swc-darwin-x64" "13.4.16"
+    "@next/swc-linux-arm64-gnu" "13.4.16"
+    "@next/swc-linux-arm64-musl" "13.4.16"
+    "@next/swc-linux-x64-gnu" "13.4.16"
+    "@next/swc-linux-x64-musl" "13.4.16"
+    "@next/swc-win32-arm64-msvc" "13.4.16"
+    "@next/swc-win32-ia32-msvc" "13.4.16"
+    "@next/swc-win32-x64-msvc" "13.4.16"
 
 "node-releases@^2.0.13":
   "integrity" "sha512-uYr7J37ae/ORWdZeQ1xxMJe3NtdmqMC/JZK+geofDrkLUApKRHPd18/TxtBOJ4A0/+uUIliorNrfYV6s1b02eQ=="
@@ -653,12 +654,21 @@
   "resolved" "https://registry.npmjs.org/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz"
   "version" "4.2.0"
 
-"postcss@^8.0.0", "postcss@^8.1.0", "postcss@^8.2.14", "postcss@^8.4.21", "postcss@^8.4.23", "postcss@^8.4.24", "postcss@>=8.0.9", "postcss@8.4.31":
+"postcss@^8.0.0", "postcss@^8.1.0", "postcss@^8.2.14", "postcss@^8.4.21", "postcss@^8.4.23", "postcss@^8.4.24", "postcss@>=8.0.9":
   "integrity" "sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ=="
   "resolved" "https://registry.npmjs.org/postcss/-/postcss-8.4.31.tgz"
   "version" "8.4.31"
   dependencies:
     "nanoid" "^3.3.6"
+    "picocolors" "^1.0.0"
+    "source-map-js" "^1.0.2"
+
+"postcss@8.4.14":
+  "integrity" "sha512-E398TUmfAYFPBSdzgeieK2Y1+1cpdxJx8yXbK/m57nRhKSmk1GB2tO4lbLBtlkfPQTDKfe4Xqv1ASWPpayPEig=="
+  "resolved" "https://registry.npmjs.org/postcss/-/postcss-8.4.14.tgz"
+  "version" "8.4.14"
+  dependencies:
+    "nanoid" "^3.3.4"
     "picocolors" "^1.0.0"
     "source-map-js" "^1.0.2"
 
@@ -877,3 +887,8 @@
   "integrity" "sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg=="
   "resolved" "https://registry.npmjs.org/zod/-/zod-3.22.4.tgz"
   "version" "3.22.4"
+
+"zod@3.21.4":
+  "integrity" "sha512-m46AKbrzKVzOzs/DZgVnG5H55N1sv1M8qZU3A8RIKbs3mrACDNeIOeilDymVb2HdmP8uwshOCF4uJ8uM9rCqJw=="
+  "resolved" "https://registry.npmjs.org/zod/-/zod-3.21.4.tgz"
+  "version" "3.21.4"
