@@ -6,18 +6,23 @@ import ServicesBlocks from '@/components/services-blocks'
 import Testimonials from '@/components/testimonials'
 import Industries from "@/components/industries";
 import ContactSection from "@/components/contact-section";
+import {Toaster} from "react-hot-toast";
 
 export default function Home() {
-  return (
-    <>
-      <Hero />
-      <Industries />
-      <ServicesBlocks />
-      <Testimonials />
-      {/*<Features />*/}
+    return (
+        <>
+            <Toaster
+                position="top-right"
+                reverseOrder={false}
+            />
+            <Hero/>
+            <Industries/>
+            <ServicesBlocks/>
+            <Testimonials/>
+            {/*<Features />*/}
 
-      <SoftwareDevelopmentCycle />
-      <ContactSection />
-    </>
-  )
+            <SoftwareDevelopmentCycle/>
+            <ContactSection/>
+        </>
+    )
 }
