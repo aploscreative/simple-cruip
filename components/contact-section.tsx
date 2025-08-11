@@ -14,9 +14,10 @@ export default function ContactSection() {
             <div className="flex flex-col justify-center h-full">
               {/* Section header */}
               <div className="w-full mx-auto text-center pb-12 md:pb-10">
-                <h2 className="h2 mb-4 text-white">Start Your Project Today</h2>
+                <h2 className="h2 mb-4 text-white">Ready to Reimagine Possibilities?</h2>
                 <p className="text-xl text-white">
-                  Leave your contact details below
+                  Tap into the future of intelligent software solutions.<br/>
+                  <b>Get your free consultation today</b> and let's build something extraordinary—together.
                 </p>
               </div>
               <ul className=" text-white text-xl marker:text-green list-outside list-disc">

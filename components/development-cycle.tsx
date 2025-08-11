@@ -7,7 +7,7 @@ export default function SoftwareDevelopmentCycle() {
                     <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
                         <h1 className="h2 mb-4">How we create valuable solutions</h1>
                         <p className="text-xl text-gray-600">
-                            We are a custom software solution development provider, which means that our development cycle will also be tailored to your project and needs. You can order end-to-end full-cycle software development, or you can pick the services you need.
+                        We build custom AI-powered solutions designed around your unique goals and challenges. Our development process adapts to your project—whether you need end-to-end AI solution delivery or specific services like model development, data engineering, or system integration.
                         </p>
                     </div>
                     <div className="max-w-4xl mx-auto">
