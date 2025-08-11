@@ -5,36 +5,36 @@ export default function ServicesBlocks() {
 
   const services = [
     {
-      title: 'Web App Development',
-      description: 'Build new features or maintain existing platforms. Our experts can cover all aspects of legacy or new projects',
+      title: 'Web Development',
+      description: 'Build or modernize platforms with AI features for smarter, more efficient performance.',
       image: 'images/service-icons/webdev.png'
     },
     {
       title: 'Mobile App Development',
-      description: 'We have expertise in building native and cross-platform mobile applications for any business',
+      description: 'Create AI-powered native or cross-platform apps with personalized, data-driven experiences.',
       image: 'images/service-icons/mobiledev.png'
     },
     {
       title: 'Data Engineering & ML',
-      description: 'Experts in building data pipelines for Machine Learning or ETL pipelines ensuring data consistency.',
+      description: 'Design reliable data pipelines for ML and ETL to keep data clean, consistent, and ready.',
       image: 'images/service-icons/mllearning.png'
     },
     {
       title: 'DevOps & Cloud',
-      description: 'Our consultants are trained to work across various cloud platforms like AWS, Azure, GCP.',
+      description: 'Deploy and scale AI solutions seamlessly across AWS, Azure, and GCP environments.',
       image: 'images/service-icons/devops.png'
     },
     {
       title: 'Business IT Consulting',
-      description: 'Upgrade your existing business infrastructure and bring innovation to the workplace.',
+      description: 'Modernize infrastructure with AI tools that boost efficiency and spark innovation.',
       image: 'images/service-icons/it.png'
     },
     {
-      title: 'CMS Development',
-      description: 'We design and develop content management systems tailored to meet business needs and automate workflows',
+      title: 'AI Chatbots & Virt. Assistants',
+      description: 'Deliver 24/7 AI-driven chatbots for personalized, human-like customer interactions.',
       image: 'images/service-icons/cms.png'
     },
-  ];
+  ];  
 
   return (
     <section className="relative">
@@ -48,7 +48,7 @@ export default function ServicesBlocks() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-10">
-            <h2 className="h2 mb-4">What we have to offer</h2>
+            <h2 className="h2 mb-4">What Sets Us Apart</h2>
             <p className="text-xl text-gray-600">
               With over a decade of experience in mobile and web app development, we enable businesses to bolster their digital presence in the fiercely competitive global market.
             </p>
